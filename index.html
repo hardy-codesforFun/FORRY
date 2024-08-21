@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorry SHIKHA 🫂</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .sorry {
+            color: #ff4d4d;
+            font-size: 24px;
+            line-height: 1.5;
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sorry SHIKHA</h1>
+    <div id="sorryContainer"></div>
+
+    <script>
+        const sorryContainer = document.getElementById('sorryContainer');
+
+        for (let i = 0; i < 1000; i++) {
+            let sorryElement = document.createElement('div');
+            sorryElement.textContent = 'Sorry';
+            sorryElement.classList.add('sorry');
+
+            // Delay the animation for each element
+            sorryElement.style.animationDelay = `${i * 0.05}s`;
+
+            sorryContainer.appendChild(sorryElement);
+        }
+    </script>
+
+</body>
+</html>
